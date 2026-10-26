@@ -1,0 +1,33 @@
+{
+  "backend": "synthetic",
+  "frame_id": "synthetic-001",
+  "image_path": "synthetic.png",
+  "pointcloud_path": "synthetic.bin",
+  "image_size": [
+    100,
+    100
+  ],
+  "timestamp": null,
+  "classes": [
+    "Pedestrian",
+    "Cyclist",
+    "Car"
+  ],
+  "boxes_lidar": [
+    [
+      10,
+      0,
+      -1,
+      2,
+      2,
+      2,
+      0
+    ]
+  ],
+  "scores": [
+    0.9
+  ],
+  "labels": [
+    2
+  ]
+}

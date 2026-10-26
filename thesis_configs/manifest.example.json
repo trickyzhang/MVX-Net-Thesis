@@ -1,0 +1,9 @@
+[
+  {
+    "frame_id": "000001",
+    "image": "/data/kitti/training/image_2/000001.png",
+    "points": "/data/kitti/training/velodyne/000001.bin",
+    "calib": "/data/kitti/training/calib/000001.txt",
+    "timestamp": null
+  }
+]

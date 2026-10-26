@@ -1,0 +1,21 @@
+name: Thesis adapter CPU tests
+on:
+  push:
+    paths: ['thesis_adapter/**', 'thesis_tests/**', 'thesis_configs/**', '.github/workflows/thesis-adapter.yml']
+  pull_request:
+    paths: ['thesis_adapter/**', 'thesis_tests/**', 'thesis_configs/**', '.github/workflows/thesis-adapter.yml']
+permissions:
+  contents: read
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.11']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r thesis_configs/requirements-cpu.txt
+      - run: python -m unittest discover -s thesis_tests -v
